@@ -1,0 +1,68 @@
+{
+  "name": "user",
+  "desc": "用户",
+  "storage": "mysql_json",
+
+  "fields": [
+    {
+      "name": "name",
+      "nick_name": "name",
+      "desc": "姓名",
+
+      "storage_type": "varchar",
+      "show_type": "string",
+      "default": "",
+      "valid": [
+        {
+          "rule_type": "max_length",
+          "rule_value": "20"
+        }
+      ],
+      "is_show": true,
+      "is_unique": true,
+      "is_must": true
+    },
+    {
+      "name": "email",
+      "nick_name": "email",
+      "desc": "邮箱",
+      "status": 1,
+
+      "storage_type": "varchar",
+      "show_type": "email",
+      "default": 0,
+      "valid": [],
+      "is_show": true,
+      "is_unique": false,
+      "is_must": true
+    },
+    {
+      "name": "address",
+      "nick_name": "address",
+      "desc": "地址",
+
+      "storage_type": "link_model_one_one",
+      "show_type": "link_model_one_one",
+      "link_model_name": "address",
+      "default": "",
+      "valid": [],
+      "is_show": true,
+      "is_unique": false,
+      "is_must": true
+    },
+    {
+      "name": "like",
+      "nick_name": "like",
+      "desc": "爱好",
+
+      "storage_type": "link_model_one_many",
+      "show_type": "link_model_one_many",
+      "link_model_name": "like",
+      "default": "",
+      "valid": [],
+      "is_show": true,
+      "is_unique": false,
+      "is_must": true
+    }
+  ]
+}

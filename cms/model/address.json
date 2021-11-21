@@ -1,0 +1,34 @@
+{
+  "name": "address",
+  "desc": "地址",
+  "storage": "mysql_json",
+
+  "fields": [
+    {
+      "name": "province",
+      "nick_name": "province",
+      "desc": "省份",
+
+      "storage_type": "varchar",
+      "show_type": "string",
+      "default": "",
+      "valid": [],
+      "is_show": true,
+      "is_unique": false,
+      "is_must": true
+    },
+    {
+      "name": "city",
+      "nick_name": "city",
+      "desc": "城市",
+
+      "storage_type": "varchar",
+      "show_type": "string",
+      "default": "",
+      "valid": [],
+      "is_show": true,
+      "is_unique": false,
+      "is_must": true
+    }
+  ]
+}

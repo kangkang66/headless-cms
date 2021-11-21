@@ -1,0 +1,28 @@
+{
+  "name": "source",
+  "desc": "来源渠道",
+  "fields": [
+    {
+      "name": "name",
+      "nick_name": "name",
+      "desc": "名称",
+
+      "storage_type": "varchar",
+      "show_type": "string",
+      "default": "",
+      "valid": [
+        {
+          "rule_type": "min_length",
+          "rule_value": "10"
+        },
+        {
+          "rule_type": "max_length",
+          "rule_value": "20"
+        }
+      ],
+      "is_show": true,
+      "is_unique": false,
+      "is_must": true
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "name": "like",
+  "desc": "喜欢",
+  "storage": "mysql_json",
+
+  "fields": [
+    {
+      "name": "name",
+      "nick_name": "name",
+      "desc": "名称",
+
+      "storage_type": "varchar",
+      "show_type": "string",
+      "default": "",
+      "valid": [
+        {
+          "rule_type": "min_length",
+          "rule_value": "10"
+        },
+        {
+          "rule_type": "max_length",
+          "rule_value": "20"
+        }
+      ],
+      "is_show": true,
+      "is_unique": false,
+      "is_must": true
+    },
+    {
+      "name": "buy_source",
+      "nick_name": "buy_source",
+      "desc": "购买渠道",
+
+      "storage_type": "link_model_one_one",
+      "show_type": "link_model_one_one",
+      "link_model_name": "source",
+      "default": "",
+      "valid": [],
+      "is_show": true,
+      "is_unique": false,
+      "is_must": true
+    }
+  ]
+}
